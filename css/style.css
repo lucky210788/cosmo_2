@@ -1,70 +1,17 @@
 :root {
     --text-color-primary: #fff;
-    --text-color-second: rgba(255, 51, 0, 1);
 }
 
 @font-face {
-    font-family: 'Montserrat-Medium';
-    src: url('../fonts/Montserrat-Medium.eot');
-    src: url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Montserrat-Medium.woff2') format('woff2'),
-    url('../fonts/Montserrat-Medium.woff') format('woff'),
-    url('../fonts/Montserrat-Medium.ttf') format('truetype'),
-    url('../fonts/Montserrat-Medium.svg#Montserrat-Medium') format('svg');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Montserrat-Light';
-    src: url('../fonts/Montserrat-Light.eot');
-    src: url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Montserrat-Light.woff2') format('woff2'),
-    url('../fonts/Montserrat-Light.woff') format('woff'),
-    url('../fonts/Montserrat-Light.ttf') format('truetype'),
-    url('../fonts/Montserrat-Light.svg#Montserrat-Light') format('svg');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Montserrat-Bold';
-    src: url('../fonts/Montserrat-Bold.eot');
-    src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Montserrat-Bold.woff2') format('woff2'),
-    url('../fonts/Montserrat-Bold.woff') format('woff'),
-    url('../fonts/Montserrat-Bold.ttf') format('truetype'),
-    url('../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+    font-family: 'Montserrat-ExtraBoldItalic';
+    src: url('../fonts/Montserrat-ExtraBoldItalic.eot');
+    src: url('../fonts/Montserrat-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-ExtraBoldItalic.woff2') format('woff2'),
+    url('../fonts/Montserrat-ExtraBoldItalic.woff') format('woff'),
+    url('../fonts/Montserrat-ExtraBoldItalic.ttf') format('truetype'),
+    url('../fonts/Montserrat-ExtraBoldItalic.svg#Montserrat-ExtraBoldItalic') format('svg');
     font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Montserrat-ExtraBold';
-    src: url('../fonts/Montserrat-ExtraBold.eot');
-    src: url('../fonts/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
-    url('../fonts/Montserrat-ExtraBold.woff') format('woff'),
-    url('../fonts/Montserrat-ExtraBold.ttf') format('truetype'),
-    url('../fonts/Montserrat-ExtraBold.svg#Montserrat-ExtraBold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Montserrat-Regular';
-    src: url('../fonts/Montserrat-Regular.eot');
-    src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Montserrat-Regular.woff2') format('woff2'),
-    url('../fonts/Montserrat-Regular.woff') format('woff'),
-    url('../fonts/Montserrat-Regular.ttf') format('truetype'),
-    url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -78,6 +25,19 @@
     url('../fonts/Montserrat-SemiBold.svg#Montserrat-SemiBold') format('svg');
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-MediumItalic';
+    src: url('../fonts/Montserrat-MediumItalic.eot');
+    src: url('../fonts/Montserrat-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-MediumItalic.woff2') format('woff2'),
+    url('../fonts/Montserrat-MediumItalic.woff') format('woff'),
+    url('../fonts/Montserrat-MediumItalic.ttf') format('truetype'),
+    url('../fonts/Montserrat-MediumItalic.svg#Montserrat-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -146,7 +106,7 @@ address {
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: 'Montserrat-Medium', sans-serif;
+    font-family: 'Montserrat-ExtraBoldItalic', sans-serif;
     font-style: normal;
 }
 
@@ -156,7 +116,12 @@ body {
     width: 100%;
     color: var(--text-color-primary);
     position: relative;
-    background: rgba(9, 34, 76, 1);
+    background: url("../images/bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    -webkit-transition: background-size 1s ease-in-out, background-position 1s ease-in-out;
+    -o-transition: background-size 1s ease-in-out, background-position 1s ease-in-out;
+    transition: background-size 1s ease-in-out, background-position 1s ease-in-out;
 }
 
 body > img {
@@ -220,18 +185,17 @@ img {
 }
 
 .container {
-    padding: 5.55vh 6.66vh 5.55vh 11.11vh;
+    padding: 0 38.6vh 0 25.46vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     width: 100%;
-    min-height: 100vh;
     position: relative;
 }
 
@@ -240,163 +204,32 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-}
-
-.content-left {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
     position: relative;
-    z-index: 2;
+    overflow: hidden;
+}
+
+.header {
+    padding: 0 13.3vh;
+    margin: 9.25vh auto 1.29vh;
+    width: 100%;
 }
 
 .logo {
-    margin-bottom: 11.11vh;
     display: inline-block;
 }
 
 .logo__img {
-    width: 33.33vh;
+    width: 13.24vh;
 }
 
-.content-left__title {
-    font-family: 'Montserrat-Bold', sans-serif;
-    font-size: 5.77vh;
-    line-height: 6.63vh;
-    text-align: left;
-    margin-bottom: 2.66vh;
-}
-
-.content-left__text {
-    font-size: 2.22vh;
-    line-height: 3.33vh;
-    text-align: left;
-    margin-bottom: 6.66vh;
-}
-
-.main-form {
-    margin-bottom: 16.33vh;
-    border-radius: 11.11vh;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 66.66vh;
-}
-
-.main-form__field {
-    font-family: 'Montserrat-Regular', sans-serif;
-    font-size: 2.88vh;
-    line-height: 6.66vh;
-    text-align: left;
-    color: rgba(30, 30, 30, 1);
-    padding: 0 3.11vh;
-    width: 66.67%;
-}
-
-::-webkit-input-placeholder {
-    color: rgba(30, 30, 30, 1);
-}
-
-:-ms-input-placeholder {
-    color: rgba(30, 30, 30, 1);
-}
-
-::-moz-placeholder {
-    color: rgba(30, 30, 30, 1);
-}
-
-:-moz-placeholder {
-    color: rgba(30, 30, 30, 1);
-}
-
-.main-form__button {
-    background: rgba(255, 51, 0, 1);
-    font-family: 'Montserrat-ExtraBold', sans-serif;
-    font-size: 2.88vh;
-    line-height: 6.66vh;
-    color: rgba(255, 255, 255, 1);
-    text-align: center;
-    padding: 0 3.98vh;
-    border: none;
-    width: 33.33%;
-}
-
-.main-form__button:hover {
-    background: rgba(9, 46, 108, 0.8);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px)
-}
-
-.menu-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-}
-
-.menu-desktop-link {
-    font-family: 'Montserrat-SemiBold', sans-serif;
-    font-size: 2.22vh;
-    line-height: 2.55vh;
-    text-align: left;
-    margin-right: 4.44vh;
-    color: var(--text-color-primary);
-}
-
-.menu-desktop-link:hover {
-    color: var(--text-color-second);
-}
-
-.content-right {
-    background: rgba(9, 46, 108, 0.8);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    border-radius: 4.44vh;
-    padding: 6.66vh 6.66vh 4.44vh;
-    width: 64.44vh;
-    position: relative;
-    z-index: 2;
-}
-
-.content-right__title {
-    margin-bottom: 6.66vh;
-    font-family: 'Montserrat-Bold', sans-serif;
-    font-size: 4.22vh;
-    line-height: 1;
-    text-align: left;
-}
-
-.content-right__text {
-    font-family: 'Montserrat-Light', sans-serif;
-    font-size: 1.33vh;
-    line-height: 1;
-    text-align: left;
-}
-
-.steps {
+.title-block{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -404,494 +237,398 @@ img {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    margin-bottom: 3.55vh;
-}
-
-.step {
-    margin-bottom: 6.66vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.step__desc {
-    font-size: 2.22vh;
-    line-height: 2.66vh;
-    text-align: left;
-    width: calc(100% - 8.88vh);
-}
-
-.text-uppercase {
     text-transform: uppercase;
 }
-
-.step__icon {
-    width: 6.66vh;
+.title-block__title{
+    font-size: 11.1vh;
+    color: rgba(249, 2, 19, 1);
+}
+.title-block__subtitle{
+    font-family: 'Montserrat-MediumItalic', sans-serif;
+    font-size: 3.45vh;
+}
+.cta{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.cta__logo-title__mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.aviator-logo {
+    width: 16.2vh;
+    margin-bottom: 7.87vh;
+}
+.cta__bonus {
+    width: 36.66vh;
+    margin-bottom: 10.18vh;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: width 1s ease-in-out, -webkit-transform 1s ease-in-out;
+    transition: width 1s ease-in-out, -webkit-transform 1s ease-in-out;
+    -o-transition: transform 1s ease-in-out, width 1s ease-in-out;
+    transition: transform 1s ease-in-out, width 1s ease-in-out;
+    transition: transform 1s ease-in-out, width 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
-.girl {
-    width: 85.44vh;
-    position: absolute;
-    bottom: 0;
-    right: 52vh;
-    z-index: 1;
-}
-
-.chip1 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 46.55vh;
-}
-
-.chip2 {
-    position: absolute;
-    bottom: 31.77vh;
-    left: 58.11vh;
-    width: 38.77vh;
-}
-
-.chip3 {
-    position: absolute;
-    top: -9.3vh;
-    left: 77.44vh;
-    width: 29.22vh;
-}
-
-.menu-icon {
-    width: 8.88vw;
-    height: 6.66vw;
-    position: relative;
-    margin: 0;
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    cursor: pointer;
-    display: none;
-}
-
-.menu-icon span {
-    display: block;
-    position: absolute;
-    height: 1.11vw;
-    width: 50%;
-    background: var(--text-color-primary);
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
-}
-
-.menu-icon span:nth-child(even) {
-    left: 50%;
-}
-
-.menu-icon span:nth-child(odd) {
-    left: 0;
-}
-
-.menu-icon span:nth-child(1), .menu-icon span:nth-child(2) {
-    top: 0;
-}
-
-.menu-icon span:nth-child(3), .menu-icon span:nth-child(4) {
-    top: 2.77vw;
-}
-
-.menu-icon span:nth-child(5), .menu-icon span:nth-child(6) {
-    top: 5.55vw;
-}
-
-.menu-icon.open span:nth-child(1), .menu-icon.open span:nth-child(6) {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.menu-icon.open span:nth-child(2), .menu-icon.open span:nth-child(5) {
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
-.menu-icon.open span:nth-child(1) {
-    left: 1vw;
-    top: 2vw;
-}
-
-.menu-icon.open span:nth-child(2) {
-    left: calc(50% - 1vw);
-    top: 2vw;
-}
-
-.menu-icon.open span:nth-child(3) {
-    left: -50%;
-    opacity: 0;
-}
-
-.menu-icon.open span:nth-child(4) {
-    left: 100%;
-    opacity: 0;
-}
-
-.menu-icon.open span:nth-child(5) {
-    left: 1vw;
-    top: 4.5vw;
-}
-
-.menu-icon.open span:nth-child(6) {
-    left: calc(50% - 1vw);
-    top: 4.5vw;
-}
-
-.menu-list-mob {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(7, 16, 35, 1);
-    padding: 41vw 4.44vw 0;
-}
-
-.menu-list-mob__item {
-    margin-bottom: 2.55vw;
-}
-
-.menu-mob-link {
+.cta__btn {
     font-family: 'Montserrat-SemiBold', sans-serif;
-    font-size: 6.11vw;
-    line-height: 11.66vw;
-    text-align: left;
+    line-height: 8.6vh;
+    background: rgba(249, 2, 19, 1);
     color: var(--text-color-primary);
+    text-transform: uppercase;
+    border-radius: 2vh;
+    padding: 0 5.09vh;
+    font-size: 4.3vh;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: line-height 1s ease-in-out, padding 1s ease-in-out, font-size 1s ease-in-out, -webkit-transform 1s ease-in-out;
+    transition: line-height 1s ease-in-out, padding 1s ease-in-out, font-size 1s ease-in-out, -webkit-transform 1s ease-in-out;
+    -o-transition: transform 1s ease-in-out, line-height 1s ease-in-out, padding 1s ease-in-out, font-size 1s ease-in-out;
+    transition: transform 1s ease-in-out, line-height 1s ease-in-out, padding 1s ease-in-out, font-size 1s ease-in-out;
+    transition: transform 1s ease-in-out, line-height 1s ease-in-out, padding 1s ease-in-out, font-size 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
-.menu-mob-link:hover {
-    color: var(--text-color-second);
+.coin1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 71.29vh;
+    -webkit-transition: left 1s ease-in-out, width 1s ease-in-out;
+    -o-transition: left 1s ease-in-out, width 1s ease-in-out;
+    transition: left 1s ease-in-out, width 1s ease-in-out;
 }
 
-.hidden {
-    overflow: hidden;
+.coin2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 37vh;
+    -webkit-transition: right 1s ease-in-out, bottom 1s ease-in-out, width 1s ease-in-out;
+    -o-transition: right 1s ease-in-out, bottom 1s ease-in-out, width 1s ease-in-out;
+    transition: right 1s ease-in-out, bottom 1s ease-in-out, width 1s ease-in-out;
 }
 
-.main-form__mob,
-.content-left__text__mob,
-.steps__mob {
+.coin3 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 42.7vh;
+    -webkit-transition: right 1s ease-in-out, top 1s ease-in-out, width 1s ease-in-out, -webkit-transform 1s ease-in-out;
+    transition: right 1s ease-in-out, top 1s ease-in-out, width 1s ease-in-out, -webkit-transform 1s ease-in-out;
+    -o-transition: right 1s ease-in-out, top 1s ease-in-out, width 1s ease-in-out, transform 1s ease-in-out;
+    transition: right 1s ease-in-out, top 1s ease-in-out, width 1s ease-in-out, transform 1s ease-in-out;
+    transition: right 1s ease-in-out, top 1s ease-in-out, width 1s ease-in-out, transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.coin4 {
+    position: absolute;
+    left: 68.3vh;
+    bottom: 0;
+    width: 41.75vh;
+    -webkit-transition: left 1s ease-in-out, bottom 1s ease-in-out, width 1s ease-in-out;
+    -o-transition: left 1s ease-in-out, bottom 1s ease-in-out, width 1s ease-in-out;
+    transition: left 1s ease-in-out, bottom 1s ease-in-out, width 1s ease-in-out;
+}
+
+.coin5 {
+    position: absolute;
+    right: 22.87vh;
+    bottom: 0;
+    width: 27.31vh;
+    -webkit-transition: right 1s ease-in-out, bottom 1s ease-in-out, width 1s ease-in-out;
+    -o-transition: right 1s ease-in-out, bottom 1s ease-in-out, width 1s ease-in-out;
+    transition: right 1s ease-in-out, bottom 1s ease-in-out, width 1s ease-in-out;
+}
+
+.hover {
+    background-size: 103% 103%;
+    background-position: center;
+}
+
+.hover .cta__bonus{
+    -webkit-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    transform: scale(1.25);
+}
+.hover .cta__btn {
+    -webkit-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    transform: scale(1.25);
+    -webkit-box-shadow: 0px 0px 35px 0px rgba(249, 2, 19, 1);
+    box-shadow: 0px 0px 35px 0px rgba(249, 2, 19, 1);
+}
+.hover-mob .cta__btn {
+    line-height: 13.94vw;
+    padding: 0 9.2vw;
+    font-size: 7vw;
+    -webkit-box-shadow: 0px 0px 35px 0px rgba(249, 2, 19, 1);
+    box-shadow: 0px 0px 35px 0px rgba(249, 2, 19, 1);
+}
+
+.hover-mob .cta__bonus{
+    width: 64.1vw;
+}
+
+.hover .coin1 {
+    left: -14vh;
+    width: 90.29vh;
+}
+
+.hover .coin2 {
+    right: -6vh;
+    bottom: -3vh;
+    width: 41vh;
+}
+
+.hover .coin3 {
+    right: -9vh;
+    top: -5vh;
+    width: 45.7vh;
+}
+
+.hover .coin4 {
+    left: 73.3vh;
+    bottom: -4vh;
+    width: 44.75vh;
+}
+
+.hover .coin5 {
+    right: 23.87vh;
+    bottom: -2vh;
+    width: 30.31vh;
+}
+
+.title-block__mob,
+.coin-mob {
     display: none;
 }
 
-@media only screen and (orientation: landscape) and (max-width: 180vh) {
-    .logo__img {
-        width: 29.33vh;
-    }
-
-    .content-left__title {
-        font-size: 4.77vh;
-        line-height: 5.63vh;
-    }
-
-    .content-left__text {
-        font-size: 2vh;
-        line-height: 3.03vh;
-    }
-
-    .menu-desktop-link {
-        font-size: 2.02vh;
-    }
-
-    .main-form__field,
-    .main-form__button {
-        font-size: 2.48vh;
-        line-height: 6.06vh;
-    }
-
-    .content-right__title {
-        margin-bottom: 6.66vh;
-    }
-
-    .step__desc {
-        font-size: 2.02vh;
-        line-height: 2.36vh;
-    }
-
-    .step {
-        margin-bottom: 6.11vh;
-    }
-
-    .content-right {
-        padding: 6.06vh 6.06vh 4.04vh;
-        width: 63.44vh;
-    }
-
-    .girl {
-        right: 44vh;
-    }
-
-    .chip2 {
-        left: 46.11vh;
-        width: 33.77vh;
-    }
-
-    .chip1 {
-        width: 41.55vh;
-    }
-
-    .chip3 {
-        top: -7.3vh;
-        left: 67.44vh;
-        width: 22.22vh;
-    }
+.d-none {
+    display: none !important;
 }
 
 @media only screen and (orientation: landscape) and (max-width: 167vh) {
     .container {
-        padding: 0 3.66vh 0 9.11vh;
+        padding: 0 22vh 0 11vh;
     }
-
-    .content-right {
-        padding: 6.06vh 6.06vh 4.04vh;
-        width: 58.44vh;
+    .coin1 {
+        width: 57.29vh;
     }
-
-    .girl {
-        right: 38vh;
-        width: 77.44vh;
+    .coin2 {
+        width: 27vh;
     }
-
-    .chip1 {
-        width: 34.55vh;
+    .coin3 {
+        width: 33.7vh;
     }
-
-    .chip2 {
-        left: 41.11vh;
-        width: 30.77vh;
-        bottom: 37.77vh;
+    .coin4 {
+        width: 30.75vh;
     }
-
-    .chip3 {
-        left: 60.44vh;
+    .coin5 {
+        width: 24.31vh;
     }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 144vh) {
-    .logo__img {
-        width: 25.33vh;
+@media only screen and (orientation: landscape) and (max-width: 135vh) {
+    .container {
+        padding: 0 16vh 0 6vh;
+    }
+    .header {
+        padding: 0 8vh;
+    }
+    .title-block__subtitle {
+        font-size: 2.45vh;
+    }
+    .title-block__title {
+        font-size: 8.1vh;
     }
 
-    .content-left__title {
-        font-size: 4.27vh;
-        line-height: 5.23vh;
+    .cta__btn {
+        line-height: 7.6vh;
+        font-size: 3vh;
     }
-
-    .content-left__text {
-        font-size: 1.8vh;
-        line-height: 2.8vh;
+    .cta__bonus {
+        width: 29.66vh;
     }
-
-    .menu-desktop-link {
-        font-size: 1.8vh;
+    .aviator-logo {
+        width: 14.2vh;
+        margin-bottom: 7.87vh;
     }
-
-    .main-form__field,
-    .main-form__button {
-        font-size: 2.08vh;
-        line-height: 5.6vh;
+    .coin1 {
+        width: 53.29vh;
     }
-
-    .main-form {
-        width: 52.66vh;
+    .coin3 {
+        width: 29.7vh;
     }
-
-    .menu-desktop-link {
-        margin-right: 3.44vh;
+    .coin2 {
+        width: 22vh;
     }
-
-    .content-right__title {
-        margin-bottom: 4.66vh;
-        font-size: 3.5vh;
+    .coin4 {
+        width: 27.75vh;
+        left: 53vh;
     }
-
-    .steps {
-        margin-bottom: 3vh;
-    }
-
-    .step__desc {
-        font-size: 1.7vh;
-        line-height: 2vh;
-        width: calc(100% - 7.88vh);
-    }
-
-    .step__icon {
-        width: 6vh;
-    }
-
-    .step {
-        margin-bottom: 5.11vh;
-    }
-
-    .content-right__text {
-        font-size: 1.03vh;
-        line-height: 1.2;
-    }
-
-    .content-right {
-        padding: 5.06vh 5.06vh 4.04vh;
-        width: 49.44vh;
-    }
-
-    .girl {
-        right: 23vh;
-        width: 72.44vh;
+    .coin5 {
+        width: 19.31vh;
     }
 }
 
 @media only screen and (orientation: portrait) {
-    .main-form__desc,
-    .content-left__text__desc,
-    .steps__desc,
-    .girl,
-    .chip1,
-    .chip2,
-    .chip3,
-    .menu-desktop {
+    .title-block,
+    .coin-desc {
         display: none;
     }
 
-    .main {
-        padding: 0;
+    .coin-mob,
+    .title-block__mob {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
     }
 
-    .container {
-        padding: 0;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
+    body {
+        background: url("../images/bg-mob.jpg") no-repeat;
+        background-size: cover;
     }
 
     .header {
-        width: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        margin-bottom: 8.88vw;
-        padding: 2.77vw 0;
-        position: relative;
-        z-index: 1;
-    }
-
-    .logo {
-        margin-bottom: 0;
-    }
-
-    .content-left__text__mob,
-    .menu-icon {
-        display: inline-block;
+        padding: 0 6.1vw;
+        margin: 5.8vw auto 14.1vw;
     }
 
     .logo__img {
-        width: 28.88vw;
+        width: 27.5vw;
     }
 
-    .content-left {
-        padding: 0 4.4vw;
+    .container {
+        padding: 0 15.5vw 0 0;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+    .cta {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+    .aviator-logo {
+        width: 30vw;
+        margin-bottom: 12.2vw;
     }
 
-    .content-left__title {
-        font-size: 7.77vw;
-        line-height: 8.33vw;
-        margin-bottom: 5.55vw;
+    .cta__bonus {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        width: 51.38vw;
+        margin: 8.05vw 0 0;
     }
 
-    .content-left__text {
-        font-size: 3.88vw;
-        line-height: 5.83vw;
-        margin-bottom: 11.11vw;
+    .cta__btn {
+        line-height: 11.94vw;
+        border-radius: 2vw;
+        padding: 0 7.2vw;
+        font-size: 6vw;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+    .title-block__title {
+        font-size: 12vw;
+    }
+    .title-block__subtitle {
+        font-size: 3.7vw;
+        margin-bottom: 7.77vw;
     }
 
-    .main-form {
-        margin-bottom: 4.44vw;
-        border-radius: 19vw;
-        width: 100%;
+    .coin1-mob {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 44.4vw;
     }
 
-    .main-form__field {
-        font-size: 4.44vw;
-        line-height: 11.11vw;
-        padding: 0 4.44vw;
+    .coin2-mob {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 56.9vw;
     }
 
-    .main-form__button {
-        font-size: 4.44vw;
-        line-height: 11.11vw;
-        padding: 0;
+    .coin3-mob {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 55vw;
     }
 
-    .content-right {
-        border-radius: 0;
-        padding: 6.66vw 4.4vw 13.05vw;
-        width: 100%;
+    .coin4-mob {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 38.3vw;
     }
+}
 
-    .content-right__title {
-        margin-bottom: 5.8vw;
-        font-size: 6.66vw;
-        line-height: 1;
+@media only screen and (orientation: portrait) and (min-height: 200vw) {
+    .header {
+        margin-bottom: 48vw;
     }
+}
 
-    .steps {
-        margin-bottom: 6.38vw;
+@media only screen and (orientation: portrait) and (min-width: 766px) {
+    .aviator-logo {
+        width: 24vw;
+        margin-bottom: 7.2vw;
     }
-
-    .step {
-        margin-bottom: 4.44vw;
+    .cta__btn {
+        line-height: 9.94vw;
+        padding: 0 5.2vw;
+        font-size: 4vw;
     }
-
-    .step__icon {
-        width: 12.5vw;
+    .cta__bonus {
+        width: 35.38vw;
     }
-
-    .step__desc {
-        font-size: 3.88vw;
-        line-height: 5vw;
-        width: calc(100% - 16.66vw);
+    .title-block__subtitle {
+        font-size: 2.5vw;
+        margin-bottom: 7vw;
     }
-
-    .content-right__text {
-        font-size: 2.77vw;
+    .title-block__title {
+        font-size: 8vw;
     }
-
-    .hidden .menu-list-mob {
-        display: inline-block;
+    .coin1-mob {
+        width: 33.4vw;
     }
-
-    .main-form__mob,
-    .steps__mob {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+    .coin2-mob {
+        right: 10vw;
+        width: 36vw;
+    }
+    .coin3-mob {
+        width: 39vw;
+    }
+    .coin4-mob {
+        width: 28.3vw;
     }
 }
